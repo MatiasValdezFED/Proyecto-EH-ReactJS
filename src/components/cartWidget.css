@@ -1,0 +1,24 @@
+.cart{
+    display: flex;
+}
+
+.carritoLogo{
+    color: white;
+}
+
+button{
+    background-color: #72002eff;
+    border: none;
+}
+
+.contadorCarrito{
+    background-color: red;
+    color: white;
+    border-radius: 45%;
+    font-size: 12px;
+    padding: 2px;
+    top: 38px;
+    right: 13px;
+    position: absolute;
+    transform: translate(-81px, 14px);
+}

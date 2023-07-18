@@ -1,0 +1,14 @@
+.imgLogo {
+    width: 90px
+}
+
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #72002eff !important;
+    color: white;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+    color: white;
+}
