@@ -3,8 +3,7 @@
 }
 
 
-.bg-light {
-    --bs-bg-opacity: 1;
+.nav {
     background-color: #72002eff !important;
     color: white;
 }

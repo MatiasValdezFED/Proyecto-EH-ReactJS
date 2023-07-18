@@ -8,9 +8,9 @@ import './navBar.css'
 function ColorSchemesExample() {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar className="nav">
         <Container>
-          <Navbar.Brand href="#home"><img class="imgLogo" src="src/assets/images/logo/logo.jpg"
+          <Navbar.Brand href="#home"><img className="imgLogo" src="src/assets/images/logo/logo.jpg"
           alt="Entre Hilos Logo"/></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>

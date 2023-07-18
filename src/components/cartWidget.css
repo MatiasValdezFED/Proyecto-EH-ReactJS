@@ -7,8 +7,8 @@
 }
 
 button{
-    background-color: #72002eff;
-    border: none;
+    background-color: #72002eff !important;
+    border: none !important;
 }
 
 .contadorCarrito{
@@ -20,5 +20,5 @@ button{
     top: 38px;
     right: 13px;
     position: absolute;
-    transform: translate(-81px, 14px);
+    transform: translate(-130px, 14px);
 }

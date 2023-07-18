@@ -4,9 +4,9 @@ import './cartWidget.css'
 
 const CartWidget = () => {
   return (
-    <div class="cart">
-        <button class="carritoLogo"><FaCartShopping size={25}/></button>
-        <span class="contadorCarrito">3</span>
+    <div className="cart">
+        <button className="carritoLogo"><FaCartShopping size={28}/></button>
+        <span className="contadorCarrito">3</span>
     </div>
   )
 }
