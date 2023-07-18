@@ -15,10 +15,10 @@ button{
     background-color: red;
     color: white;
     border-radius: 45%;
-    font-size: 12px;
+    font-size: 15px;
     padding: 2px;
     top: 38px;
     right: 13px;
     position: absolute;
-    transform: translate(-130px, 14px);
+    transform: translate(-307px, 14px);
 }

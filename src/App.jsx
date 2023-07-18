@@ -8,7 +8,7 @@ function App() {
     <>
       <NavBar/>
       <ItemListContainer
-      greeting="Bienvenidos a Entre Hilos" 
+      greeting="Pronto estaremos con ustedes, bienvenidos!" 
       />
     </>
   )
