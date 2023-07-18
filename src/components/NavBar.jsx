@@ -14,10 +14,10 @@ function ColorSchemesExample() {
           alt="Entre Hilos Logo"/></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">Nosotros</Nav.Link>
-            <Nav.Link href="#pricing">Articulos</Nav.Link>
-            <Nav.Link href="#pricing">Contacto</Nav.Link>
-            <Nav.Link href="#pricing">FAQ</Nav.Link>
+            <Nav.Link href="#nosotros">Nosotros</Nav.Link>
+            <Nav.Link href="#articulos">Articulos</Nav.Link>
+            <Nav.Link href="#contacto">Contacto</Nav.Link>
+            <Nav.Link href="#FAQ">FAQ</Nav.Link>
           </Nav>
           <CartWidget/>
         </Container>
