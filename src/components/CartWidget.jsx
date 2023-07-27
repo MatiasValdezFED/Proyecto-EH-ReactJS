@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCartShopping } from "react-icons/fa6";
-import './cartWidget.css'
+import '../index.css'
 
 const CartWidget = () => {
   return (
