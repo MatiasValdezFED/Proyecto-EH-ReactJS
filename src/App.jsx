@@ -1,14 +1,15 @@
 import React from 'react'
 import NavBar from './components/navBar'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <>
       <NavBar/>
       <ItemListContainer
-      greeting="Pronto estaremos con ustedes, bienvenidos!" 
+      greeting="Bienvenidos a Entre Hilos!"
       />
     </>
   )
