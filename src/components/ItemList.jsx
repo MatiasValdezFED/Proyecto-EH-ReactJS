@@ -1,8 +1,8 @@
-import React from 'react'
-import Item from './Item'
-import '../index.css'
+import React from "react";
+import Item from "./Item";
+import "../index.css";
 
-const ItemList = ({listaProductos}) => {
+const ItemList = ({ listaProductos }) => {
   return (
     <div>
       {listaProductos.map((producto) => (
@@ -10,6 +10,6 @@ const ItemList = ({listaProductos}) => {
       ))}
     </div>
   );
-}
+};
 
-export default ItemList
+export default ItemList;
