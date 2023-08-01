@@ -18,9 +18,9 @@ const ItemCount = () => {
 
   return (
     <>
-      <Button as="input" type="button" onClick={restar} value="Restar" />{" "}
+      <Button as="input" type="button" onClick={restar} value="-" />{" "}
       <p>{count}</p>
-      <Button as="input" type="button" onClick={sumar} value="Sumar" />{" "}
+      <Button as="input" type="button" onClick={sumar} value="+" />{" "}
     </>
   );
 };
