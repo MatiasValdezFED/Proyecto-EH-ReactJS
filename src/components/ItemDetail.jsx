@@ -1,8 +1,8 @@
 import React from "react";
+import Item from "./Item";
+import "../index.css";
 
-const ItemDetail = () => {
-  console.log(productos);
-
+const ItemDetail = ({ listaProductos }) => {
   return (
     <div>
       <h1>ItemDetail</h1>

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailConteiner = () => {
-  const products = [
+  const productos = [
     {
       id: 1,
       title: "Hilo Encerado",
@@ -33,9 +33,9 @@ const ItemDetailConteiner = () => {
   ];
 
   const getProducts = new Promise((resolve, reject) => {
-    if (products.length > 0) {
+    if (productos.length > 0) {
       setTimeout(() => {
-        resolve(products);
+        resolve(productos);
       }, 2000);
     } else {
       reject(new error("Products not found"));
@@ -52,7 +52,7 @@ const ItemDetailConteiner = () => {
 
   return (
     <>
-      <ItemDetail productos={productos} />
+      <ItemDetail productos={productos} listaProductos={listaProductos} />
     </>
   );
 };
