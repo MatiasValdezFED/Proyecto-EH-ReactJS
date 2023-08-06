@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import ItemCount from "./ItemCount";
+import { useParams } from "react-router-dom";
 import "../index.css";
 
 function ItemListContainer({ greeting }) {
+  const { category } = useParams();
+
   const products = [
     {
       id: 1,

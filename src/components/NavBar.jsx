@@ -22,11 +22,11 @@ function ColorSchemesExample() {
           </Link>
 
           <Nav className="me-auto">
-            <Nav.Link href="#home">Hilos</Nav.Link>
-            <Nav.Link href="#nosotros">Tejidos</Nav.Link>
-            <Nav.Link href="#articulos">Cierres</Nav.Link>
-            <Nav.Link href="#contacto">Elásticos</Nav.Link>
-            <Nav.Link href="#FAQ">Lanas</Nav.Link>
+            <Link to={`/category/${"Hilos"}`}>Hilos</Link>
+            <Link to={`/category/${"Tejido"}`}>Tejidos</Link>
+            <Link to={`/category/${"Cierres"}`}>Cierres</Link>
+            <Link to={`/category/${"Elasticos"}`}>Elásticos</Link>
+            <Link to={`/category/${"Lanas"}`}>Lanas</Link>
           </Nav>
           <Link to={"/cart"}>
             <CartWidget />
