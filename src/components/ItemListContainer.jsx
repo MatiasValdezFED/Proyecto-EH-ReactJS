@@ -49,12 +49,6 @@ function ItemListContainer({ greeting }) {
   const [listaProductos, setListaProductos] = useState([]);
 
   useEffect(() => {
-    getProducts
-      .then((res) => setListaProductos(res))
-      .catch((error) => console.log(error));
-  }, []);
-
-  useEffect(() => {
     if (category) {
       setListaProductos(
         products.filter((product) => product.category === category)
