@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
+import "../index.css";
 
 const ItemDetailConteiner = () => {
   const productos = [
@@ -41,18 +41,13 @@ const ItemDetailConteiner = () => {
     }
   });
 
-  const [listaProductos, setListaProductos] = useState([]);
-  const { id } = useParams();
-
-  useEffect(() => {
-    getProducts
-      .then((res) => setListaProductos(res))
-      .catch((error) => console.log(error));
-  }, []);
+  getProducts
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
 
   return (
     <>
-      <ItemDetail productos={listaProductos} id={id} />
+      <ItemDetail productos={productos} />
     </>
   );
 };

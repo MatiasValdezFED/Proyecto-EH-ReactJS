@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "./CartWidget";
-import "../index.css";
 import { Link } from "react-router-dom";
+import "../index.css";
 
 function ColorSchemesExample() {
   return (
@@ -22,11 +22,21 @@ function ColorSchemesExample() {
           </Link>
 
           <Nav className="me-auto">
-            <Link to={`/category/Hilos`}>Hilos</Link>
-            <Link to={`/category/Tejido`}>Tejidos</Link>
-            <Link to={`/category/Cierres`}>Cierres</Link>
-            <Link to={`/category/Elasticos`}>Elásticos</Link>
-            <Link to={`/category/Lanas`}>Lanas</Link>
+            <Link className="linkNav" to={`/category/Hilos`}>
+              Hilos
+            </Link>
+            <Link className="linkNav" to={`/category/Tejido`}>
+              Tejidos
+            </Link>
+            <Link className="linkNav" to={`/category/Cierres`}>
+              Cierres
+            </Link>
+            <Link className="linkNav" to={`/category/Elasticos`}>
+              Elásticos
+            </Link>
+            <Link className="linkNav" to={`/category/Lanas`}>
+              Lanas
+            </Link>
           </Nav>
           <Link to={"/cart"}>
             <CartWidget />

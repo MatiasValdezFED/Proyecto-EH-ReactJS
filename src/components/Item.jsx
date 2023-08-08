@@ -4,16 +4,17 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "../index.css";
 
-function Item({ producto }) {
-  const { id, title, price, description, stock } = producto;
+function Item({ product }) {
+  const { id, title, price, description, stock } = product;
+  console.log(product);
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="card" style={{ width: "18rem" }}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <Link to={`/item/${id}`}>
-          <Button variant="primary">Ver</Button>
+          <Button variant="primary">Ver detalle</Button>
         </Link>
       </Card.Body>
     </Card>

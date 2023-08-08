@@ -67,7 +67,7 @@ button:focus-visible {
   }
 }
 
-/* navBar */
+/* NavBar */
 
 .imgLogo {
   width: 90px
@@ -83,18 +83,24 @@ button:focus-visible {
   color: white;
 }
 
-/* itemListContainer */
+.linkNav {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+/* ItemListContainer */
 
 .greetingContainer{
   position: relative;
-  min-height: 100vh;
+  min-height: 25vh;
 }
 
 .greeting {
   display: flex;
   justify-content: center;
   left: 700px;
-  top: 300px;
+  top: 100px;
   font-weight: bold;
   font-size: 25px;
   position: absolute;
@@ -122,7 +128,19 @@ object-fit: cover;
   mix-blend-mode: overlay;
 }
 
-/* cartWidget */
+/* Item */
+
+.card{
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  display: block;
+  --bs-card-spacer-y: 2rem;
+  --bs-card-spacer-x: 3rem;
+}
+
+
+/* CartWidget */
 
 .cart{
   display: flex;
