@@ -1,17 +1,23 @@
 import React from "react";
-import Item from "./Item";
 import "../index.css";
-import { useParams } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ listaProductos }) => {
-  const { id } = useParams;
+const ItemDetail = ({ productos, id }) => {
+  const filteredProduct = productos.filter((producto) => producto.id === id);
+
+  if (!filteredProduct) {
+    return <p>Producto no encontrado</p>;
+  }
+
+  console.log(filteredProduct);
 
   return (
     <div>
-      <h1>ItemDetail</h1>
-      {listaProductos.map((producto) => (
-        <Item key={producto.id} producto={producto} />
-      ))}
+      <h1>Detalle del Producto</h1>
+      <div key={productos.id}>
+        <h2>{filteredProduct.title}</h2>
+        <ItemCount />
+      </div>
     </div>
   );
 };

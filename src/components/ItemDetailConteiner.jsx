@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailConteiner = () => {
   const productos = [
@@ -34,15 +35,14 @@ const ItemDetailConteiner = () => {
 
   const getProducts = new Promise((resolve, reject) => {
     if (productos.length > 0) {
-      setTimeout(() => {
-        resolve(productos);
-      }, 2000);
+      resolve(productos);
     } else {
       reject(new error("Products not found"));
     }
   });
 
   const [listaProductos, setListaProductos] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
     getProducts
@@ -52,7 +52,7 @@ const ItemDetailConteiner = () => {
 
   return (
     <>
-      <ItemDetail productos={productos} listaProductos={listaProductos} />
+      <ItemDetail productos={listaProductos} id={id} />
     </>
   );
 };

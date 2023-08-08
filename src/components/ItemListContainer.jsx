@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import ItemCount from "./ItemCount";
 import { useParams } from "react-router-dom";
 import "../index.css";
 
@@ -55,6 +54,16 @@ function ItemListContainer({ greeting }) {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    if (category) {
+      setListaProductos(
+        products.filter((product) => product.category === category)
+      );
+    } else {
+      setListaProductos(products);
+    }
+  }, [category]);
+
   return (
     <>
       <div className="greetingContainer">
@@ -64,8 +73,7 @@ function ItemListContainer({ greeting }) {
         </video>
         <div className="pageCover"></div>
       </div>
-      <ItemList listaProductos={listaProductos} />
-      <ItemCount />
+      <ItemList products={listaProductos} />
     </>
   );
 }
