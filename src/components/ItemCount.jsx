@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-const ItemCount = () => {
+const ItemCount = ({ p }) => {
   const [count, setCount] = useState(0);
 
   const restar = () => {
@@ -11,16 +11,28 @@ const ItemCount = () => {
   };
 
   const sumar = () => {
-    // if (count < stock) {
-    setCount((count) => count + 1);
-    //}
+    if (count < p.stock) {
+      setCount((count) => count + 1);
+    }
   };
 
   return (
     <>
-      <Button as="input" type="button" onClick={restar} value="-" />{" "}
-      <p>{count}</p>
-      <Button as="input" type="button" onClick={sumar} value="+" />{" "}
+      <Button
+        className="counterButton"
+        as="input"
+        type="button"
+        onClick={restar}
+        value="-"
+      />{" "}
+      <p className="count">{count}</p>
+      <Button
+        className="counterButton"
+        as="input"
+        type="button"
+        onClick={sumar}
+        value="+"
+      />{" "}
     </>
   );
 };

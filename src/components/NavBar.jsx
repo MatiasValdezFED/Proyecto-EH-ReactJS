@@ -25,7 +25,7 @@ function ColorSchemesExample() {
             <Link className="linkNav" to={`/category/Hilos`}>
               Hilos
             </Link>
-            <Link className="linkNav" to={`/category/Tejido`}>
+            <Link className="linkNav" to={`/category/Tejidos`}>
               Tejidos
             </Link>
             <Link className="linkNav" to={`/category/Cierres`}>

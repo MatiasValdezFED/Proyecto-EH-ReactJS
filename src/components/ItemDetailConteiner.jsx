@@ -11,16 +11,16 @@ const ItemDetailConteiner = () => {
       category: "Hilos",
       // "pictureUrl": "../assets/Productos/Hilo Encerado.jpg",
       description: "Hilo reforzado con cera",
-      stock: 5,
+      stock: 10,
     },
     {
       id: 2,
       title: "Totora",
       price: 800,
-      category: "Tejido",
+      category: "Tejidos",
       // "pictureUrl": "../assets/Productos/Totoras.jpg",
       description: "Totora x kg",
-      stock: 5,
+      stock: 3,
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const ItemDetailConteiner = () => {
       category: "Cierres",
       // "pictureUrl": "../assets/Productos/Cierres reforzados.jpg",
       description: "Cierre antidesgaste resitente",
-      stock: 5,
+      stock: 25,
     },
   ];
 
