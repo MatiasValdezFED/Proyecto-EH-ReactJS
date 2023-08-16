@@ -16,8 +16,6 @@ const ItemDetail = ({ productos }) => {
     setCantidad(cantidad);
   };
 
-  //El onClick hace un setCantidad y cambia el valor del useState
-
   return (
     <div>
       {filteredProducts.map((p) => {

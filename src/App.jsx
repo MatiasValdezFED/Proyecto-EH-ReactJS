@@ -31,8 +31,6 @@ function App() {
           <Route exact path="/item/:id" element={<ItemDetailConteiner />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
-
-        <Cart />
       </ShoppingCartContext>
     </BrowserRouter>
   );
