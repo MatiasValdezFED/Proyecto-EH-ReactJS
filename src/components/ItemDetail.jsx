@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../index.css";
 
 const ItemDetail = ({ productos }) => {
   const { id } = useParams();
 
-  console.log(productos);
-
   const filteredProducts = productos.filter((producto) => producto.id == id);
 
-  console.log(productos);
+  const [cantidadAñadida, setCantidad] = useState([0]);
+
+  const agregarCantidad = (cantidad) => {
+    setCantidad(cantidad);
+  };
+
+  //El onClick hace un setCantidad y cambia el valor del useState
 
   return (
     <div>
@@ -31,7 +35,11 @@ const ItemDetail = ({ productos }) => {
                 <ListGroup.Item>${p.price}</ListGroup.Item>
               </ListGroup>
               <Card.Body>
-                <ItemCount p={p} />
+                {cantidadAñadida > 0 ? (
+                  <Link to={"./cart"}>Finalizar</Link>
+                ) : (
+                  <ItemCount producto={p} onAdd={agregarCantidad} />
+                )}
               </Card.Body>
             </Card>
           </div>

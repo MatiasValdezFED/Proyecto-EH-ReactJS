@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-const ItemCount = ({ p }) => {
-  const [count, setCount] = useState(0);
+const ItemCount = ({ producto, onAdd }) => {
+  const [cantidad, setCount] = useState(0);
 
   const restar = () => {
-    if (count > 0) {
-      setCount((count) => count - 1);
+    if (cantidad > 0) {
+      setCount((cantidad) => cantidad - 1);
     }
   };
 
   const sumar = () => {
-    if (count < p.stock) {
-      setCount((count) => count + 1);
+    if (cantidad < producto.stock) {
+      setCount((cantidad) => cantidad + 1);
     }
   };
 
@@ -25,7 +25,7 @@ const ItemCount = ({ p }) => {
         onClick={restar}
         value="-"
       />{" "}
-      <p className="count">{count}</p>
+      <p className="count">{cantidad}</p>
       <Button
         className="counterButton"
         as="input"
@@ -33,6 +33,13 @@ const ItemCount = ({ p }) => {
         onClick={sumar}
         value="+"
       />{" "}
+      <Button
+        className="counterButton"
+        as="input"
+        type="button"
+        onClick={() => onAdd(cantidad)}
+        value="Agregar al carrito"
+      />
     </>
   );
 };
