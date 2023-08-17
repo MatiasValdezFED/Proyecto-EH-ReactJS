@@ -7,12 +7,15 @@ export const CartContext = createContext({
 export const ShoppingCartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  console.log(cart);
+
   const addItem = (item, cantidad) => {
     if (!inCart(item.id)) {
       setCart((prev) => [...prev, { ...item, cantidad }]);
     } else {
       console.log("Error, el producto ya fue agregado");
     }
+    console.log(inCart(item.id));
   };
 
   const eliminarItem = (itemId) => {
