@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import "../index.css";
 
 function Item({ product }) {
-  const { id, title, price, description, stock } = product;
+  const { id, title, price, description, stock, imagen } = product;
   console.log(product);
   return (
     <Card className="card" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
+        <img src={imagen} alt={title} className="cardImg" />
         <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Text>${price}</Card.Text>
         <Link to={`/item/${id}`}>
           <Button variant="primary">Ver detalle</Button>
         </Link>
