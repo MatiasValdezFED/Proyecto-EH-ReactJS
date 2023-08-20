@@ -6,12 +6,21 @@ import "../index.css";
 
 const CartWidget = () => {
   const { cart } = useContext(CartContext);
+
+  const cartLength = () => {
+    let cantidad = 0;
+    cart.map((elem) => {
+      cantidad += elem.cantidad;
+    });
+    return cantidad;
+  };
+
   return (
     <div className="cart">
       <button className="carritoLogo">
         <FaCartShopping size={28} />
       </button>
-      <span className="contadorCarrito">{cart.length}</span>
+      <span className="contadorCarrito">{cartLength()}</span>
     </div>
   );
 };

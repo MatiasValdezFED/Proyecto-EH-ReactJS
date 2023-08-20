@@ -37,7 +37,8 @@ const ItemCount = ({ producto, onAdd }) => {
         className="counterButton"
         as="input"
         type="button"
-        onClick={() => onAdd(cantidad)}
+        onClick={() => cantidad > 0 && onAdd(cantidad)}
+        disabled={cantidad === 0}
         value="Agregar al carrito"
       />
     </>

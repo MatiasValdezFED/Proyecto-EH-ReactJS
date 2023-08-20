@@ -31,7 +31,7 @@ function ColorSchemesExample() {
             <Link className="linkNav" to={`/category/Cierres`}>
               Cierres
             </Link>
-            <Link className="linkNav" to={`/category/Elasticos`}>
+            <Link className="linkNav" to={`/category/Elásticos`}>
               Elásticos
             </Link>
             <Link className="linkNav" to={`/category/Lanas`}>

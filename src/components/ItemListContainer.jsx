@@ -35,7 +35,7 @@ function ItemListContainer({ greeting }) {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [category]);
 
   return (
     <>
