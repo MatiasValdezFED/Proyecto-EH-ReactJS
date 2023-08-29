@@ -31,24 +31,41 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <div>
-      <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-          <Card.Body>
-            <Card.Title>{producto.title}</Card.Title>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>{producto.description}</ListGroup.Item>
-            <ListGroup.Item>Stock: {producto.stock}</ListGroup.Item>
-            <ListGroup.Item>${producto.price}</ListGroup.Item>
-          </ListGroup>
-          <Card.Body>
-            {cantidadAñadida > 0 ? (
-              <Link to={"/cart"}>Finalizar</Link>
-            ) : (
-              <ItemCount producto={producto} onAdd={agregarCantidad} />
-            )}
-          </Card.Body>
+      <div className="detailBack">
+        <Card
+          className="detail"
+          style={{
+            width: "45rem",
+            padding: "70px",
+          }}
+        >
+          <Card.Img
+            src={producto.imagen}
+            alt={producto.title}
+            className="cardImgDetail"
+            variant="top"
+          />
+          <div className="bodyDetail">
+            <Card.Body>
+              <Card.Title>{producto.title}</Card.Title>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroup.Item>{producto.description}</ListGroup.Item>
+              <ListGroup.Item>Stock: {producto.stock}</ListGroup.Item>
+              <ListGroup.Item>${producto.price}</ListGroup.Item>
+            </ListGroup>
+            <Card.Body>
+              {cantidadAñadida > 0 ? (
+                <button className="btnFinalizar">
+                  <Link to={"/cart"} className="textFinalizar">
+                    Ir al carrito
+                  </Link>
+                </button>
+              ) : (
+                <ItemCount producto={producto} onAdd={agregarCantidad} />
+              )}
+            </Card.Body>
+          </div>
         </Card>
       </div>
     </div>

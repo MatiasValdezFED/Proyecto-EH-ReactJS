@@ -67,6 +67,13 @@ button:focus-visible {
   }
 }
 
+.loading{
+  text-align: center;
+  background: beige;
+  padding: 50px;
+  padding-bottom: 100%;
+}
+
 /* NavBar */
 
 .imgLogo {
@@ -133,6 +140,10 @@ object-fit: cover;
 .productos__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  background-color: beige;
+  padding-bottom: 100% !important;
+  padding: 50px;
+  gap: 20px;
 }
 
 /* Item */
@@ -144,20 +155,27 @@ object-fit: cover;
   display: block;
   --bs-card-spacer-y: 2rem;
   --bs-card-spacer-x: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0 !important;
+  border-top-left-radius: 3rem !important;
+  border-top-right-radius: 3rem !important;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
+  border-radius: 0 !important;
+  border-top-left-radius: 3rem !important;
+  border-top-right-radius: 3rem !important;
 }
 
 .cardImg{
-  width: 100%;
-        height: 300px;
         object-fit: cover;
-        border-radius: 0;
-        border-top-left-radius: 3rem;
-        border-top-right-radius: 3rem;
+        width: 100%;
+        height: 300px;
+        border-radius: 0 !important;
+        border-top-left-radius: 3rem !important;
+        border-top-right-radius: 3rem !important;
 }
 
 /* ItemCount */
@@ -176,8 +194,56 @@ object-fit: cover;
     margin-left: 25px;
     margin-right: 25px;
     font-weight: bold;
+    padding-top: 15px;
   }
 
+.addButton{
+  margin: 25px;
+  background: #72002eff !important;
+}
+
+.counterButton{
+  display: flex !important;
+  padding-left: 35px;
+}
+
+/* ItemDetail */
+
+.detail{
+  display: flex !important;
+  flex-direction: row !important;
+  margin-left: 30% !important;
+  border-radius: 40px !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bodyDetail{
+  display: block;
+  margin-left: 35px;
+}
+
+.cardImgDetail{
+        height: 370px;
+        width: 63% !important;
+        object-fit: cover;
+}
+
+.detailBack{
+  background: beige;
+  padding: 100px;
+  padding-bottom: 100%;
+}
+
+.btnFinalizar{
+  border-radius: 9px;
+  margin-left: 10px;
+}
+
+.textFinalizar{
+  text-decoration: none;
+  color: white;
+  font: bold;
+}
 
 /* CartWidget */
 

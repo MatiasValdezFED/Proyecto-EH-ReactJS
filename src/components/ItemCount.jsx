@@ -18,29 +18,21 @@ const ItemCount = ({ producto, onAdd }) => {
 
   return (
     <>
-      <Button
-        className="counterButton"
-        as="input"
-        type="button"
-        onClick={restar}
-        value="-"
-      />{" "}
-      <p className="count">{cantidad}</p>
-      <Button
-        className="counterButton"
-        as="input"
-        type="button"
-        onClick={sumar}
-        value="+"
-      />{" "}
-      <Button
-        className="counterButton"
-        as="input"
-        type="button"
-        onClick={() => cantidad > 0 && onAdd(cantidad)}
-        disabled={cantidad === 0}
-        value="Agregar al carrito"
-      />
+      <div className="counterButton">
+        <Button as="input" type="button" onClick={restar} value="-" />{" "}
+        <p className="count">{cantidad}</p>
+        <Button as="input" type="button" onClick={sumar} value="+" />{" "}
+      </div>
+      <div className="addButton">
+        <Button
+          className=""
+          as="input"
+          type="button"
+          onClick={() => cantidad > 0 && onAdd(cantidad)}
+          disabled={cantidad === 0}
+          value="Agregar al carrito"
+        />
+      </div>
     </>
   );
 };
