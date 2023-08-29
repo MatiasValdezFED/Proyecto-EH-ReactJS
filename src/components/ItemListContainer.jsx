@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
+import Loading from "./Loading";
 import { useParams } from "react-router-dom";
 import {
   getFirestore,
@@ -36,6 +37,8 @@ function ItemListContainer({ greeting }) {
         console.log(error);
       });
   }, [category]);
+
+  if (productos.length === 0) return <Loading />;
 
   return (
     <>

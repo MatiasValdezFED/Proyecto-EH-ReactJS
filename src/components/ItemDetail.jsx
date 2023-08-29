@@ -2,8 +2,11 @@ import React, { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import Loading from "./Loading";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/ShoppingCartContext";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 import "../index.css";
 
 const ItemDetail = ({ producto }) => {
@@ -14,9 +17,17 @@ const ItemDetail = ({ producto }) => {
   const agregarCantidad = (cantidad) => {
     setCantidad(cantidad);
     addItem(producto, cantidad);
+    Toastify({
+      text: "Producto Añadido",
+      className: "info",
+      position: "center bottom",
+      style: {
+        background: "linear-gradient(to right, #72002eff, #70566dff)",
+      },
+    }).showToast();
   };
 
-  if (!producto) return <p>loading</p>;
+  if (!producto) return <Loading />;
 
   return (
     <div>
