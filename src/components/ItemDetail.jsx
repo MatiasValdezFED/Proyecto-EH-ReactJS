@@ -56,11 +56,18 @@ const ItemDetail = ({ producto }) => {
             </ListGroup>
             <Card.Body>
               {cantidadAñadida > 0 ? (
-                <button className="btnFinalizar">
-                  <Link to={"/cart"} className="textFinalizar">
-                    Ir al carrito
-                  </Link>
-                </button>
+                <div>
+                  <button className="btnFinalizar">
+                    <Link to={"/cart"} className="textFinalizar">
+                      Ir al Carrito
+                    </Link>
+                  </button>
+                  <button className="btnFinalizar">
+                    <Link to={"/"} className="textFinalizar">
+                      Seguir Comprando
+                    </Link>
+                  </button>
+                </div>
               ) : (
                 <ItemCount producto={producto} onAdd={agregarCantidad} />
               )}

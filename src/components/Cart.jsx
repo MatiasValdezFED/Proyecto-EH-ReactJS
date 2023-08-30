@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
+import { FaRegTrashCan } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "../index.css";
 
@@ -15,9 +16,13 @@ const Cart = () => {
 
   if (cantidadTotal < 1) {
     return (
-      <div>
+      <div className="cartActions">
         <h1>No hay productos en el carrito</h1>
-        <Link to={"/"}>Ver productos</Link>
+        <button className="carritoFinalizar">
+          <Link className="textFinalizar" to={"/"}>
+            Ver productos
+          </Link>
+        </button>
       </div>
     );
   }
@@ -39,18 +44,22 @@ const Cart = () => {
                 {productoEnCarrito.cantidad * productoEnCarrito.price}
               </p>
               <button onClick={() => eliminarItem(productoEnCarrito.id)}>
-                Eliminar
+                <FaRegTrashCan size={23} color="white" />
               </button>
             </div>
           ))}
         </div>
-        <h2>Precio Total: ${precioTotal()}</h2>
-        <button className="carritoFinalizar" onClick={() => limpiarCart()}>
-          Vaciar Carrito
-        </button>
-        <button className="carritoFinalizar">
-          <Link to={"/checkout"}>Finalizar Compra</Link>
-        </button>
+        <div className="cartActions">
+          <h2>Precio Total: ${precioTotal()}</h2>
+          <button className="carritoFinalizar" onClick={() => limpiarCart()}>
+            Vaciar Carrito
+          </button>
+          <button className="carritoFinalizar">
+            <Link className="textFinalizar" to={"/checkout"}>
+              Finalizar Compra
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   );
