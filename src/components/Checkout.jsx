@@ -86,10 +86,12 @@ const Checkout = () => {
             aria-label="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit">Enviar información</button>
+          <button className="carritoFinalizar" type="submit">
+            Enviar información
+          </button>
         </InputGroup>
       </form>
-      <p>Número de orden: {orderId} </p>
+      <p className="order">Número de orden: {orderId} </p>
     </div>
   );
 };

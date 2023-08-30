@@ -324,10 +324,35 @@ button{
 }
 
 .carritoFinalizar{
-  border-radius: 9px;
+  border-radius: 9px !important;
   margin-left: 10px;
   margin-bottom: 20px;
   text-decoration: none !important;
   color: white !important;
   font: bold;
+}
+
+/* Checkout */
+
+.input-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center !important
+}
+
+.input-group-text{
+  margin: 10px !important;
+  border-radius: 9px !important;
+}
+
+.form-control{
+  width: 30% !important;
+  border-radius: 1rem !important;
+  margin: 20px !important;
+}
+
+.order{
+  margin-left: 42%;
 }
