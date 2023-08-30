@@ -11,6 +11,7 @@ const Checkout = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState("");
+  const [repeatEmail, setRepeatEmail] = useState("");
   const [orderId, setOrderId] = useState(null);
   const { cart, precioTotal } = useContext(CartContext);
 
@@ -18,12 +19,41 @@ const Checkout = () => {
 
   const emailValidation = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/;
 
+  const handlePhoneChange = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, "");
+    setPhone(numericValue);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!name || !phone || !email || !repeatEmail) {
+      Toastify({
+        text: "Por favor, complete todos los campos obligatorios.",
+        className: "info",
+        position: "center bottom",
+        style: {
+          background: "linear-gradient(to right, red, red)",
+        },
+      }).showToast();
+      return;
+    }
 
     if (!emailValidation.test(email)) {
       Toastify({
         text: "¡El correo electrónico no es válido!",
+        className: "info",
+        position: "center bottom",
+        style: {
+          background: "linear-gradient(to right, red, red)",
+        },
+      }).showToast();
+      return;
+    }
+
+    if (email !== repeatEmail) {
+      Toastify({
+        text: "Los correos electrónicos no coinciden.",
         className: "info",
         position: "center bottom",
         style: {
@@ -57,6 +87,7 @@ const Checkout = () => {
     email,
     Carrito: cart,
     Total: precioTotal(),
+    Fecha: new Date().toLocaleString(),
   };
 
   console.log(order);
@@ -79,12 +110,21 @@ const Checkout = () => {
           <InputGroup.Text>Teléfono</InputGroup.Text>
           <Form.Control
             aria-label="Teléfono"
-            onChange={(e) => setPhone(e.target.value)}
+            type="tel"
+            value={phone}
+            onChange={handlePhoneChange}
           />
           <InputGroup.Text>Email</InputGroup.Text>
           <Form.Control
             aria-label="Email"
+            type="email"
             onChange={(e) => setEmail(e.target.value)}
+          />
+          <InputGroup.Text>Repita su Email</InputGroup.Text>
+          <Form.Control
+            aria-label="Repeat Email"
+            type="email"
+            onChange={(e) => setRepeatEmail(e.target.value)}
           />
           <button className="carritoFinalizar" type="submit">
             Enviar información
