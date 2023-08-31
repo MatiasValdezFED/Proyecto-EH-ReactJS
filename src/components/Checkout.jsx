@@ -27,7 +27,7 @@ const Checkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !phone || !email || !repeatEmail) {
+    if (!phone || !email || !repeatEmail) {
       Toastify({
         text: "Por favor, complete todos los campos obligatorios.",
         className: "info",
