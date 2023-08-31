@@ -19,9 +19,21 @@ const ItemCount = ({ producto, onAdd }) => {
   return (
     <>
       <div className="counterButton">
-        <Button as="input" type="button" onClick={restar} value="-" />{" "}
+        <Button
+          className="plusLess"
+          as="input"
+          type="button"
+          onClick={restar}
+          value="-"
+        />{" "}
         <p className="count">{cantidad}</p>
-        <Button as="input" type="button" onClick={sumar} value="+" />{" "}
+        <Button
+          className="plusLess"
+          as="input"
+          type="button"
+          onClick={sumar}
+          value="+"
+        />{" "}
       </div>
       <div className="addButton">
         <Button
