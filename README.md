@@ -16,7 +16,7 @@ Agradezco enormemente esta formación y todas las personas que nos acompañaron!
 
 Dejo el GIF de mi proyecto:
 
-![Gif Proyecto](Gifproyecto)
+![Gif Proyecto](C:\Users\matia\OneDrive\Desktop\entre-hilos-ecommerce\Gif.gif)
 
 Dejo el árbol de componentes:
 
