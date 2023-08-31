@@ -20,4 +20,4 @@ Dejo el GIF de mi proyecto:
 
 Dejo el árbol de componentes:
 
-![Arbol de componentes](ReactTree.png)
+![ReactTree](https://github.com/MatiasValdezFED/Proyecto-EH-ReactJS/assets/123515392/ffd5fdea-635e-4bf5-a181-4525a50ab75f)
