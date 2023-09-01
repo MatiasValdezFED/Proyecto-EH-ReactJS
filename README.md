@@ -16,7 +16,7 @@ Agradezco enormemente esta formación y todas las personas que nos acompañaron!
 
 Dejo el GIF de mi proyecto:
 
-![Gif Proyecto](C:\Users\matia\OneDrive\Desktop\entre-hilos-ecommerce\Gif.gif)
+![GifProyecto](https://github.com/MatiasValdezFED/Proyecto-EH-ReactJS/assets/123515392/9be91942-af55-4b46-bc9d-b5a49bf75bf2)
 
 Dejo el árbol de componentes:
 
