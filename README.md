@@ -13,11 +13,3 @@ En cuanto a las librerías extra utilizadas, elegí Toastify para los alerts y R
 [React-Icons](https://react-icons.github.io/react-icons/)
 
 Agradezco enormemente esta formación y todas las personas que nos acompañaron! espero poder ayudar a mi mamá con esta página y darle la tranquilidad que se merece.
-
-Dejo el GIF de mi proyecto:
-
-![GifProyecto](https://github.com/MatiasValdezFED/Proyecto-EH-ReactJS/assets/123515392/9be91942-af55-4b46-bc9d-b5a49bf75bf2)
-
-Dejo el árbol de componentes:
-
-![ReactTree](https://github.com/MatiasValdezFED/Proyecto-EH-ReactJS/assets/123515392/ffd5fdea-635e-4bf5-a181-4525a50ab75f)

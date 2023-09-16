@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "./CartWidget";
+import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "../index.css";
 
@@ -43,6 +44,16 @@ function ColorSchemesExample() {
           </Link>
         </Container>
       </Navbar>
+      <div className="wp__container">
+        <a
+          href="https://api.whatsapp.com/send/?phone=5493516104002"
+          target="_blank"
+        >
+          <i>
+            <FaWhatsapp className="iconWp" />
+          </i>
+        </a>
+      </div>
     </>
   );
 }
